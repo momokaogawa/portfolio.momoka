@@ -1,0 +1,386 @@
+html {
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+}
+
+
+ .play{
+    font-family: 'Playfair Display', serif;
+ }
+
+ .container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+    position: relative;
+ }
+
+ .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+ }
+/*Header*/
+ header {
+    padding: 27px 0;
+ }
+ .logo{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+ }
+ .logo span{
+    color: #407a97;
+ }
+ .header_menu li {
+    margin-left: 40px;
+ }
+  .header_menu li a {
+    transition: .3s;
+    font-size: 18px;
+ }
+ .header_menu li a:hover {
+    color: #407a97;
+    transition: .3s;
+    font-size: 20px;
+ }
+@media only screen and (max-width: 768px) {
+    header .container {
+        justify-content: center;
+    }
+    .header_menu li {
+        margin: 20px 16px 0 16px;
+ }
+}
+
+ /* メイン */
+ #hero{
+  background-image: url(../images/hero.jpg);
+  background-position: calc(50% + 30px) center;
+  background-size: 110%;
+  height: 700px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;     /* ←追加：縦並び */
+  align-items: center;        /* ←横中央 */
+  justify-content: center;    /* ←縦中央 */
+    padding-top: 150px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 100px;
+}
+
+ #hero ::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #5588BB;   
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.05;
+    z-index: -1;
+    
+ }
+ .hero_inner {
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 100%;
+ }
+ .hero_inner h1,.hero_inner p{
+  margin: 0;
+  z-index: 2;
+}
+ .hero_inner p {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 10px;
+ }
+ .hero_inner h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    z-index: 2;
+ }
+ .cake{
+      font-family: 'Dancing Script', cursive;
+  margin-top: 150px;   /* ←約1インチ */
+  font-size: 30px;
+  font-weight: 600;
+  color: white;   
+  padding-right: -30px;    /* 見えるように（必要なら） */
+  z-index: 2;
+}
+
+.scroll{
+  position: absolute;
+  left: 50%;
+  bottom: 40px;           /* heroの下からの距離 */
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  z-index: 2;
+}
+.arrow{
+  display: inline-block;
+  position: relative;
+  width: 1px;
+  height: 50px;
+  background: white;
+}
+
+.arrow::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid white;
+}
+.arrow{
+  animation: float 1.4s ease-in-out infinite;
+}
+html{
+  scroll-behavior: smooth;
+}
+.scroll{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes float{
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(8px); }
+}
+
+
+
+ @media only screen and (max-width: 768px) {
+    #hero {height: 460px;}
+    .hero_inner p {font-size: 15px;}
+    .hero_inner h1 {font-size: 17px;}
+ }
+
+ /* ホーム */
+ #home {
+    margin-bottom: 60px;
+ }
+ .home-block{
+    position: relative;
+  margin-bottom: 100px;   /* ←ここで1個目と2個目の間が空く */
+}
+ .title {
+
+    font-size: 30px;
+    font-weight: 600;
+    color: #8dbcd3;
+    margin-bottom: 30px;
+ }
+ 
+ #home h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+ }
+ .column-2 {
+    width: 48%;
+ }
+ .text {
+    line-height: 1;
+ }
+ .home-img{
+    background-image: url(../images/home.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 340px;
+    border-radius: 20px;
+ }
+  .invent-img{
+    background-image: url(../images/invent.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 340px;
+    border-radius: 20px;
+ }
+
+ .heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: 150px;
+  font-weight: 700;
+  color: #407a97;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-30%);
+  z-index: -1;
+} .heading-2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 150px;
+  font-weight: 700;
+  color: #407a97;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-60%);
+  z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+    #home h3{
+        font-size: 24px;
+        line-height: 1.5;}
+    .column-2 {width: 100%;}
+    .text {
+        line-height: 1.7;
+        font-size: 15px;
+    }
+    .home-img {margin-top: 30px;}
+}   
+
+/* service */
+#about {
+    margin-bottom: 120px;   
+}
+.about_inner {
+    margin-bottom: 40px;
+    position: relative;
+}
+.column-40 {
+    width: 40%;
+}
+.column-55 {
+    width: 55%;
+}
+#about img{
+    border-radius: 20px;
+}
+#about h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .column-40{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .column-55{
+        width: 100%;
+    }
+    #about h3 {
+        font-size: 17px;
+    }
+}
+
+/* history */
+#history {
+    margin-bottom: 120px;
+}
+#history dl{
+    max-width: 1000px;
+    margin-left:  inherit;
+    width: 100%;
+    font-weight: 700;
+    font-size: 24px;
+    
+}
+#history dt {
+    margin-left:  auto;   
+    width: 80%;
+    padding: 25px 0;
+    font-weight: 600;
+    border-top: 1px solid #407a97;
+}
+#history dd {
+    margin-left:  auto;
+    width: 70%;
+    padding: 25px 0;
+    border-top: 0.5px solid #407a97;
+}
+
+@media only screen and (max-width: 768px) {
+    #history dl {
+        font-size: 15px;
+    }
+    #history dt {
+        width: 100%;
+        padding: 13px 0;
+    }
+    #history dd {
+        width: 100%;
+        padding: 13px 0;
+    }
+}
+
+
+/* bottom */
+.photo-row{
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  margin-bottom: 100px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+.photo-row > div{
+  width: calc((100% - 48px) / 4); /* gapが16px×3 = 48px */
+}
+
+.column-a {
+    background-image: url(../images/summit.png);
+    background-position: center;
+    background-size: cover;
+    width: 24%;
+    height: 270px;
+    border-radius: 20px;
+}
+.column-b {
+    background-image: url(../images/max.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 24%;
+    height: 270px;
+    border-radius: 20px;
+}
+.column-c {
+    background-image: url(../images/study.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 24%;
+    height: 270px;
+    border-radius: 20px;
+}
+.column-d {
+    background-image: url(../images/kyuyo.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 24%;
+    height: 270px;
+    border-radius: 20px;
+}
+
+footer{
+    text-align: center;
+    margin: 90px 0;
+ }
+.mail {
+    font-size: 13px;
+    margin-top: 30px;
+}
