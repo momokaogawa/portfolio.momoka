@@ -4,34 +4,28 @@
 
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Momoka Ogawa</title>
-  
+  <meta name="description" content="小川桃佳のポートフォリオサイト。国際経験・リーダーシップ・研究活動の紹介。">
+
   <!-- リセットCSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
-  
+
   <!-- style.css -->
 <link rel="stylesheet" href="css/style.css">
-<!-- <link rel="stylesheet" href="./style.css?v=5"> -->
 
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+JP:wght@400;500;700&family=Almendra:wght@400..700&family=Playfair+Display:ital,wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-　<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-　<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:ital,wght@400;500;700&display=swap" rel="stylesheet">
 
-
-
+  <!-- 一番重要な画像（hero）だけ先読みして、体感速度を上げる -->
+  <link rel="preload" as="image" href="images/hero.jpg">
 
 </head>
-  
+
 <body>
-  
+
   <header>
     <div class="container flex play">
         <a href="" class="logo">
@@ -42,11 +36,12 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Strength</a></li>
                 <li><a href="#history">History</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>    
-    </div>        
+        </nav>
+    </div>
   </header>
-  
+
   <main>
 
     <section id="hero" class="container">
@@ -65,9 +60,6 @@
         <div class="scroll" id="scrollArrow">
         <p>START THE JOURNEY</p>
         <span class="arrow"></span>
-        </div>
-
-
         </div>
 
     </section>
@@ -90,14 +82,14 @@
             </br>middle school, then went on to a public high school.<br>
             </br>I am currently on a long-term exchange program in Missouri,<br>
             </br>funded by a scholarship from　Okinawa Consulate.<br></br>
-            私は沖縄出身の高校生、小川ももかです。<br></br>
+            私は沖縄出身の高校生、小川桃佳です。<br></br>
             小中はAMICUSインターナショナルスクールに通い、<br></br>
             その後、公立高校へ進学し、現在は沖縄総領事館の奨学金を受けて<br></br>
             アメリカミズーリ州の高校に留学しています。
 
         </p>
       </div>
-      <div class="column-2 home-img"></div>
+      <div class="column-2 home-img" data-bg="images/home.jpg"></div>
     </div>
   </div>
 
@@ -128,7 +120,7 @@
             技術を使ってデザインし、形にし、楽しみながら学んでいる。
         </p>
       </div>
-      <div class="column-2 invent-img"></div>
+      <div class="column-2 invent-img" data-bg="images/invent.jpg"></div>
     </div>
   </div>
 
@@ -138,11 +130,10 @@
         <h2 class="title play">Strength</h2>
         <div class="about_inner flex">
             <div class="column-40">
-                <img src="./images/about.jpg"
-                width="100%" alt="">
+                <img src="./images/about.jpg" width="480" height="320" loading="lazy" decoding="async" alt="国際的な環境での経験の様子">
             </div>
             <div class="column-55">
-                <div class="heading">International</div>        
+                <div class="heading">International</div>
                 <h3>International Environment・Experience</h3>
                 <p class="text">幼少期から海外や異文化に触れる機会があり、言語や価値観の違いをたくさん学んできた。<br>
                     <br>
@@ -158,11 +149,10 @@
         </div>
         <div class="about_inner flex">
             <div class="column-40">
-                <img src="./images/leadership.jpeg"
-                width="100%" alt="">
+                <img src="./images/leadership.jpeg" width="480" height="320" loading="lazy" decoding="async" alt="リーダーシップ経験の様子">
             </div>
             <div class="column-55">
-                <div class="heading">Leadership</div>        
+                <div class="heading">Leadership</div>
                 <h3>Classleader・Student Council・School Festival Committee・Research Leader</h3>
                 <p class="text">小中ではクラスリーダーやグループリーダー、生徒会を行ってきた<br>
                     <br>
@@ -176,11 +166,10 @@
         </div>
         <div class="about_inner flex">
             <div class="column-40">
-                <img src="./images/craft.jpg"
-                width="100%" alt="">
+                <img src="./images/craft.jpg" width="480" height="320" loading="lazy" decoding="async" alt="琉球大学での研究の様子">
             </div>
             <div class="column-55">
-                <div class="heading">Research</div>        
+                <div class="heading">Research</div>
                 <h3>Research at Ryukyu University</h3>
                 <p class="text">中学の頃はハカセ塾、高校ではカガク院で各1年ずつ様々な分野について学び、<br>
                     <br>
@@ -239,23 +228,51 @@
      </section>
 
      <div class="photo-row">
-        <div class="column-a"></div>
-        <div class="column-b"></div>
-        <div class="column-c"></div>
-        <div class="column-d"></div>
+        <div class="column-a" data-bg="images/summit.png"></div>
+        <div class="column-b" data-bg="images/max.jpg"></div>
+        <div class="column-c" data-bg="images/study.jpg"></div>
+        <div class="column-d" data-bg="images/kyuyo.jpg"></div>
      </div>
 
+     <section id="contact" class="container">
+        <h2 class="title play">Contact</h2>
+        <p class="text contact-lead">
+            お仕事のご依頼・ご質問など、お気軽にこちらのフォームからご連絡ください。
+        </p>
+
+        <!--
+          ここはFormspreeというフォーム送信サービスを使っています。
+          https://formspree.io で無料アカウントを作り、発行されたフォームIDに
+          下記の YOUR_FORM_ID を置き換えてください。
+        -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="message">メッセージ</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <!-- スパム対策（人間には見えないハニーポット） -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <button type="submit" class="contact-submit">送信する</button>
+        </form>
+     </section>
+
   </main>
-  
+
   <footer>
     <a href="" class="logo">
             <span>Momoka</span> Ogawa
     </a>
-    <div class="mail">
-        momoka@ogaworks.com
+    <div class="footer-links">
+        <a href="#contact">Contact</a>
     </div>
   </footer>
-  
+
   <script>
   const arrow = document.getElementById("scrollArrow");
 
@@ -286,10 +303,29 @@
 
     requestAnimationFrame(animateScroll);
   });
+
+  // 画面外の背景画像は、近づいてから読み込む（重い画像を一気に読み込まない）
+  const lazyBgEls = document.querySelectorAll('[data-bg]');
+  if ('IntersectionObserver' in window) {
+    const bgObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.style.backgroundImage = `url(${el.dataset.bg})`;
+          el.classList.add('bg-loaded');
+          observer.unobserve(el);
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+
+    lazyBgEls.forEach(el => bgObserver.observe(el));
+  } else {
+    // 古いブラウザ用フォールバック
+    lazyBgEls.forEach(el => {
+      el.style.backgroundImage = `url(${el.dataset.bg})`;
+    });
+  }
 </script>
-
-
-
 
 </body>
 
