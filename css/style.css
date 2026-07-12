@@ -58,6 +58,7 @@ html {
   background-image: url(../images/hero.jpg);
   background-position: calc(50% + 30px) center;
   background-size: 110%;
+  background-color: #dfe7ec; /* 画像読み込み前のプレースホルダー色 */
   height: 700px;
   border-radius: 20px;
 
@@ -76,13 +77,13 @@ html {
     content: '';
     width: 100%;
     height: 100%;
-    background-color: #5588BB;   
+    background-color: #5588BB;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0.05;
     z-index: -1;
-    
+
  }
  .hero_inner {
     z-index: 2;
@@ -110,7 +111,7 @@ html {
   margin-top: 150px;   /* ←約1インチ */
   font-size: 30px;
   font-weight: 600;
-  color: white;   
+  color: white;
   padding-right: -30px;    /* 見えるように（必要なら） */
   z-index: 2;
 }
@@ -186,7 +187,7 @@ html{
     color: #8dbcd3;
     margin-bottom: 30px;
  }
- 
+
  #home h3 {
     font-size: 26px;
     font-weight: 700;
@@ -198,19 +199,16 @@ html{
  .text {
     line-height: 1;
  }
- .home-img{
-    background-image: url(../images/home.jpg);
+ /* 背景画像は data-bg + JS(IntersectionObserver) で画面近くまで来たら読み込む。
+    ここではプレースホルダー色のみ指定し、background-image は付けない。 */
+ .home-img,
+ .invent-img {
     background-position: center;
     background-size: cover;
+    background-color: #eef3f6;
     height: 340px;
     border-radius: 20px;
- }
-  .invent-img{
-    background-image: url(../images/invent.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 340px;
-    border-radius: 20px;
+    transition: opacity .4s ease;
  }
 
  .heading {
@@ -247,11 +245,11 @@ html{
         font-size: 15px;
     }
     .home-img {margin-top: 30px;}
-}   
+}
 
 /* service */
 #about {
-    margin-bottom: 120px;   
+    margin-bottom: 120px;
 }
 .about_inner {
     margin-bottom: 40px;
@@ -265,6 +263,9 @@ html{
 }
 #about img{
     border-radius: 20px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 #about h3 {
     font-size: 24px;
@@ -295,10 +296,10 @@ html{
     width: 100%;
     font-weight: 700;
     font-size: 24px;
-    
+
 }
 #history dt {
-    margin-left:  auto;   
+    margin-left:  auto;
     width: 80%;
     padding: 25px 0;
     font-weight: 600;
@@ -343,44 +344,81 @@ html{
   width: calc((100% - 48px) / 4); /* gapが16px×3 = 48px */
 }
 
-.column-a {
-    background-image: url(../images/summit.png);
-    background-position: center;
-    background-size: cover;
-    width: 24%;
-    height: 270px;
-    border-radius: 20px;
-}
-.column-b {
-    background-image: url(../images/max.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 24%;
-    height: 270px;
-    border-radius: 20px;
-}
-.column-c {
-    background-image: url(../images/study.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 24%;
-    height: 270px;
-    border-radius: 20px;
-}
+.column-a,
+.column-b,
+.column-c,
 .column-d {
-    background-image: url(../images/kyuyo.jpg);
     background-position: center;
     background-size: cover;
+    background-color: #eef3f6;
     width: 24%;
     height: 270px;
     border-radius: 20px;
+    transition: opacity .4s ease;
+}
+
+/* お問い合わせ */
+#contact {
+    margin-bottom: 100px;
+    max-width: 640px;
+}
+.contact-lead {
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contact-form label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 16px;
+}
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #ccd7dd;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #407a97;
+}
+.contact-submit {
+    margin-top: 24px;
+    align-self: flex-start;
+    background-color: #407a97;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+.contact-submit:hover {
+    background-color: #305c74;
 }
 
 footer{
     text-align: center;
     margin: 90px 0;
  }
-.mail {
-    font-size: 13px;
-    margin-top: 30px;
+.footer-links {
+    font-size: 14px;
+    margin-top: 20px;
+}
+.footer-links a {
+    color: #407a97;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    text-decoration: underline;
 }
